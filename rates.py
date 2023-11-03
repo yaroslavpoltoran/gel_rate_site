@@ -5,6 +5,8 @@ import requests
 
 import cfg as cfg
 
+logging.basicConfig(level=logging.INFO)
+
 
 def save_dict_to_json(data: Dict[str, Any], path: str) -> None:
     with open(path, "w") as fp:
