@@ -2,6 +2,7 @@ from typing import Dict, List, Any
 import logging
 import json
 import requests
+from datetime import datetime
 
 import cfg as cfg
 
@@ -36,9 +37,14 @@ def get_rates(
 
 
 def save_rates(
-    currencies: Dict[str, List[str]] = cfg.CURRENCIES, api_url: str = cfg.API_URL, path: str = cfg.RATES_MAP_PATH
+    currencies: Dict[str, List[str]] = cfg.CURRENCIES,
+    api_url: str = cfg.API_URL,
+    path: str = cfg.RATES_MAP_PATH,
+    add_time: bool = True,
 ) -> None:
     rates = get_rates(currencies=currencies, api_url=api_url)
+    if add_time:
+        rates['dt'] = datetime.now().strftime("%Y-%m-%d %H:%M")
     save_dict_to_json(data=rates, path=path)
 
 
