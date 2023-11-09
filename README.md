@@ -2,6 +2,8 @@
 
 This is a simple Python application that calculates exchange rates for the Georgian Lari (GEL) against other selected currencies by default. You can choose another currency for exchange in `cfg.py` file. The application is built with [Streamlit](https://streamlit.io/) and fetches exchange rate data from a public API. Please note, that exchange rates are not real-time and are updated once a day. So they may differ from the actual exchange rates.
 
+The application is primarily designed for use on mobile phones, allowing users to quickly determine whether something is expensive or not :)
+
 ## Try it out
 Applications is available [here](http://206.189.54.224:8888/). It runs on DigitalOcean droplet.
 
