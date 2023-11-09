@@ -53,7 +53,7 @@ Exchange rate data is fetched from [fawazahmed0/currency-api](https://github.com
 
 
 ## Feedback and Contribution
-If you encounter any issues, have feature suggestions, or would like to contribute to the development of this extension, please visit the [GitHub repository](https://github.com/yaroslavpoltoran/gel_rate_site) and create an issue or pull request.
+If you encounter any issues, have feature suggestions, or would like to contribute to the development of this application, please visit the [GitHub repository](https://github.com/yaroslavpoltoran/gel_rate_site) and create an issue or pull request.
 
 ## Contact the Project Maintainer
 
