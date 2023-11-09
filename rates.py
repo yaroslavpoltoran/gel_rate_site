@@ -6,10 +6,7 @@ from datetime import datetime
 
 import cfg as cfg
 
-logging.basicConfig(
-    format='%(asctime)s %(levelname)-8s %(message)s',
-    level=logging.INFO,
-    datefmt='%Y-%m-%d %H:%M:%S')
+logging.basicConfig(format="%(asctime)s %(levelname)-8s %(message)s", level=logging.INFO, datefmt="%Y-%m-%d %H:%M:%S")
 
 
 def save_dict_to_json(data: Dict[str, Any], path: str) -> None:
@@ -47,7 +44,7 @@ def save_rates(
 ) -> None:
     rates = get_rates(currencies=currencies, api_url=api_url)
     if add_time:
-        rates['dt'] = datetime.now().strftime("%Y-%m-%d %H:%M")
+        rates["dt"] = datetime.now().strftime("%Y-%m-%d %H:%M")
     save_dict_to_json(data=rates, path=path)
 
 
