@@ -6,13 +6,16 @@ from datetime import datetime
 
 import cfg as cfg
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    format='%(asctime)s %(levelname)-8s %(message)s',
+    level=logging.INFO,
+    datefmt='%Y-%m-%d %H:%M:%S')
 
 
 def save_dict_to_json(data: Dict[str, Any], path: str) -> None:
     with open(path, "w") as fp:
         json.dump(data, fp, sort_keys=False, indent=4, ensure_ascii=False)
-    logging.info("Dict saved to json", extra={"path": path})
+    logging.info("Dict saved to json")
 
 
 def get_rates(
